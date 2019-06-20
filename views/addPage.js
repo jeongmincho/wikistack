@@ -6,19 +6,15 @@ module.exports = () =>
     <h3>Add a Page</h3>
     <hr />
     <form method="POST" action="/wiki/">
-      <div>PLACEHOLDER FOR AUTHOR NAME FIELD</div>
-
-      <div>PLACEHOLDER FOR AUTHOR EMAIL FIELD</div>
-
       <div class="form-group">
-        <label for="name" class="col-sm-2 control-label">Page name</label>
+        <label for="name" class="col-sm-2 control-label">Name</label>
         <div class="col-sm-10">
           <input id="name" name="name" type="text" class="form-control" />
         </div>
       </div>
 
       <div class="form-group">
-        <label for="email" class="col-sm-2 control-label">Page email</label>
+        <label for="email" class="col-sm-2 control-label">Email</label>
         <div class="col-sm-10">
           <input id="email" name="email" type="text" class="form-control" />
         </div>
@@ -31,7 +27,12 @@ module.exports = () =>
         </div>
       </div>
 
-      <div>PLACEHOLDER FOR PAGE CONTENT TEXTAREA FIELD</div>
+      <div class="form-group">
+        <label for="content" class="col-sm-2 control-label">Page Content</label>
+        <div class="col-sm-10">
+          <input id="content" name="content" type="text" class="form-control" />
+        </div>
+      </div>
 
       <div>PLACEHOLDER FOR PAGE STATUS INPUT FIELD</div>
 

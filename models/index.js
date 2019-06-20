@@ -38,6 +38,20 @@ const User = db.define("users", {
   }
 });
 
+const slugGenerator = title => {
+  // const slug = title.replace(/ /g, "_");
+  // return slug;
+  return title.replace(/\s+/g, "_").replace(/\W/g, "");
+};
+
+Page.beforeValidate(pageInstance => {
+  // console.log("im setting the slug");
+  pageInstance.slug = slugGenerator(pageInstance.title);
+});
+
+Page.belongsTo(User, { as: "author" });
+User.hasMany(Page);
+
 module.exports = {
   db,
   Page,
